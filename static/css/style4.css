@@ -1,0 +1,36 @@
+/* CATEGORY SECTION */
+
+.container{
+    display: grid;
+    grid-gap: 5rem;
+    grid-template-columns: repeat(5, 200px);
+}
+
+.allitems-category{
+    width: 100%;
+    padding: 60px 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.allitems-category-box {
+    width: 250px;
+    height: 250px;
+    background-color: rgb(151, 151, 216);
+    text-align: center;
+}
+
+.allitems-category-box h3 {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.allitems-list {
+    font-size: 25px;
+    display: flex;
+    column-gap: 50px;
+}
+
+

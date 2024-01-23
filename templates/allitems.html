@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Items Page</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <div class="image"></div>
+    <!--category section-->
+    <section class="allitems-category">
+        <!-- <div class="container">
+            <a href="#" class="allitems-category-box">
+                <h3>Analgesics</h3>
+            </a>
+            <a href="#" class="allitems-category-box">
+                <h3>Opioids</h3>
+            </a>
+            <a href="#" class="allitems-category-box">
+                <h3>Barbiturates</h3>
+            </a>
+            <a href="#" class="allitems-category-box">
+                <h3>Antidiarrheals</h3>
+            </a>
+            <a href="#" class="allitems-category-box">
+                <h3>Prescription drugs</h3>
+            </a>
+            <a href="#" class="allitems-category-box">
+                <h3>Stimulant</h3>
+            </a>
+            <a href="#" class="allitems-category-box">
+                <h3>Antiarrhythmics</h3>
+            </a>
+            <a href="#" class="allitems-category-box">
+                <h3>Antifungals</h3>
+            </a>
+            <a href="#" class="allitems-category-box">
+                <h3>Antidepressants</h3>
+            </a>
+            <a href="#" class="allitems-category-box">
+                <h3>Anticonvulsants</h3>
+            </a>
+            <a href="#" class="allitems-category-box">
+                <h3>Antibacterials</h3>
+            </a>
+            <a href="#" class="allitems-category-box">
+                <h3>Cannabinoids</h3>
+            </a>
+            <a href="#" class="allitems-category-box">
+                <h3>Inhalants</h3>
+            </a>
+            <a href="#" class="allitems-category-box">
+                <h3>Miscellaneous</h3>
+            </a>
+        </div>
+    </section>
+    <section class="allitems-category">
+        <div class="allitems-list">
+            <a href="#">A</a>
+            <a href="#">B</a>
+            <a href="#">C</a>
+            <a href="#">D</a>
+            <a href="#">E</a>
+            <a href="#">F</a>
+            <a href="#">G</a>
+            <a href="#">H</a>
+            <a href="#">I</a>
+            <a href="#">J</a>
+            <a href="#">K</a>
+            <a href="#">L</a>
+            <a href="#">M</a>
+            <a href="#">N</a>
+            <a href="#">O</a>
+            <a href="#">P</a>
+            <a href="#">Q</a>
+            <a href="#">R</a>
+            <a href="#">S</a>
+            <a href="#">T</a>
+            <a href="#">U</a>
+            <a href="#">V</a>
+            <a href="#">W</a>
+            <a href="#">X</a>
+            <a href="#">Y</a>
+            <a href="#">Z</a>
+        </div> -->
+
+        <div class="body">
+            <div>Medicine Name: <span id="medicine-name"></span></div>
+            <div>Medicine Category: <span id="medicine-category"></span></div>
+            <div>Batch Number: <span id="batch-number"></span></div>
+            <div>Expiry Date: <span id="expiry-date"></span></div>
+            <div>Replacement Date: <span id="replace-date"></span></div>
+        </div>
+
+    </section>
+    <script>
+        const medicineName = localStorage.getItem('medicine-name')
+        const medCategory = localStorage.getItem('medicine-category')
+        const batchNumValue = localStorage.getItem('batch-number')
+        const expDateValue = localStorage.getItem('expiry-date')
+        const repDateValue = localStorage.getItem('replace-date')
+
+        document.getElementById('medicine-name').textContent = medicineName
+        document.getElementById('medicine-category').textContent = medCategory
+        document.getElementById('batch-number').textContent = batchNumValue
+        document.getElementById('expiry-date').textContent = expDateValue
+        document.getElementById('replace-date').textContent = repDateValue
+    </script>
+</body>
+</html>

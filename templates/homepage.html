@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="/static/css/style3.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="{{ url_for('static', filename='images/medical-pharmacy-logo.jpg')}}" class="logo">
+            <div class="header">
+                <h2>Welcome, <span id="company-name">{{ session['company-name'] }}</span></h2><br>
+                <div>Username: <span id="user-name">{{ session['user-name'] }}</span></div>
+                <div>Address: <span id="address-value">{{ session['address-value'] }}</span></div>
+                <div>Email: <span id="email-value">{{ session['email-value'] }}</span></div>
+                <div>Phone: <span id="phone-value">{{ session['phone-value'] }}</span></div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Summary</a></li>
+                <li><a href="/allitems">All Items</a></li>
+                <li><a href="#">Expiry Notifications</a></li>
+                <li><a href="#">Replacement</a></li>
+                <li><a href="/additems"><i class='bx bxs-plus-square'></i></a></li>
+                
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

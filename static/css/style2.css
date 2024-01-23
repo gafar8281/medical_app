@@ -1,0 +1,146 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    background-image: url(/static/images/medicine-capsules-global.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.model {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    /* background-color: white; */
+    overflow: auto;
+    padding-top: 60px;
+    width: 25%;
+    height: 100%;
+    top: 50%; /* Adjust top and left to shift the element to the center */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the element precisely */
+    z-index: 1;
+    position: fixed;
+  }
+  
+
+.model-content{
+    /* position: relative; */
+    /* background-color: white; */
+    /* margin: 5% auto 15% auto; */
+    /* border: 1px solid #888; */
+    width: 80%; 
+}
+
+.imgcontainer{
+    text-align: center;
+    margin: 24px 0 12 0;
+    position: relative;
+}
+
+img.images{
+    width: 20%;
+    height: 20%;
+    border-radius: 40%;
+}
+
+.head1{
+    color: rgb(12, 78, 93);
+    text-align: center;
+    
+}
+
+.head2{
+    text-align: center;
+}
+
+input[type=text],input[type=password],input[type=email],input[type=number]{
+    width: 98%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button{
+    background-color: blue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width:100%;
+    border-radius: 25px;
+}
+
+button:hover{
+    opacity: 0.8;
+}
+.hide-icon{
+    position: relative;
+}
+.eye-icon{
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY();
+    font-size: 18px;
+    color:rgb(122, 116, 122)
+}
+
+.sub-btn{
+    width: 25%;
+    margin: auto;
+}
+
+.container{
+    padding: 16px;
+    
+}
+
+span.psw{
+    float: right;
+    padding-top: 16px;
+}
+#username{
+    border-radius: 25px;
+}
+#password{
+    border-radius: 25px;
+}
+#medicinename{
+    border-radius: 25px;
+
+}
+#batchno{
+    border-radius: 25px;
+}
+#medcat{
+    border-radius: 25px;
+}
+h2{
+    color: rgb(12, 78, 93)
+}
+#full_name{
+    border-radius: 25px;
+}
+#user{
+    border-radius: 25px;
+}
+#address{
+    border-radius: 25px;
+}
+#email{
+    border-radius: 25px;
+}
+#phone_number{
+    border-radius: 25px;
+}
+#password{
+    border-radius: 25px;
+}
+#Confirm_Password{
+    border-radius: 25px;
+}

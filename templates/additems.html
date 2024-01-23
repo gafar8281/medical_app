@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Items Page</title>
+    <link rel="stylesheet" href="/static/css/style2.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="model">
+        <form id="form" class="model-content animate" action='/submit' method="post">
+            <h2 class="head1">MedCare Medical Inventory</h2>
+            <div class="imgcontainer">
+            <img src="/static/images/medical-pharmacy-logo.jpg" class="images">
+            </div>
+            <h2 class="head2">Add new medicine</h2>
+            <div class="container">
+                <label>Medicine Name</label>
+                <input type="text" id="medicinename" placeholder="Medicine Name" required>
+            <br />
+            <br />
+                <label>Batch No.</label>
+                <input type="text" id="batchno" placeholder="Batch No." required>
+            <br />
+            <br />
+                <label>Medicine Category</label>
+                <input type="text" id="medcat" placeholder="Medicine Category" required>
+                <!-- <select name="medcat">
+                    <option value="analgesics">Analgesics</option>
+                    <option value="opioids">Opioids</option>
+                    <option value="barbiturates">Barbiturates</option>
+                    <option value="antidiarrheals">Antidiarrheals</option>
+                    <option value="prescription-drugs">Prescription drugs</option>
+                    <option value="stimulant">Stimulant</option>
+                    <option value="antiarrhythmics">Antiarrhythmics</option>
+                    <option value="antifungals">Antifungals</option>
+                    <option value="antidepressants">Antidepressants</option>
+                    <option value="anticonvulsants">Anticonvulsants</option>
+                    <option value="antibacterials">Antibacterials</option>
+                    <option value="cannabinoids">Cannabinoids</option>
+                    <option value="inhalants">Inhalants</option>
+                    <option value="miscellaneous">Miscellaneous</option>
+                </select> -->
+            <br />
+            <br />
+                <label>Expiry Date</label>
+                <input type="date" id="expdate" placeholder="Expiry Date" required>
+            <br />
+            <br />
+                <label>Replacement Date</label>
+                <input type="date" id="repdate" placeholder="Replacement Date" required>
+            <br />
+            <br />
+            <div class="sub-btn">
+            <button type="submit">Add</button>
+            </div>
+            <label>Add more items? <a href="additems.html">Click here</a></label>
+            </div>
+            </form>
+</div>
+
+<script>
+    const form = document.getElementById('form')
+    const medicineName = document.getElementById('medicinename')
+    const medcategory = document.getElementById('medcat')
+    const batchNo = document.getElementById('batchno')
+    const expDate = document.getElementById('expdate')
+    const repDate = document.getElementById('repdate')
+    
+    form.addEventListener('submit',function(e){
+        e.preventDefault();
+        
+        const medicineNameValue = medicineName.value;
+        const medcategoryValue = medcategory.value;
+        const batchNoValue = batchNo.value;
+        const expDateValue = expDate.value;
+        const repDateValue = repDate.value;
+
+        localStorage.setItem('medicine-name', medicineNameValue);
+        localStorage.setItem('medicine-category', medcategoryValue);
+        localStorage.setItem('batch-number', batchNoValue);
+        localStorage.setItem('expiry-date', expDateValue);
+        localStorage.setItem('replace-date', repDateValue);
+
+        window.location.href = "{{ url_for('allitems') }}";
+
+    })
+</script>
+</body>
+</html>
